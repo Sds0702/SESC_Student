@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xml:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>Graduation</title>
+    <meta th:replace="fragments/header"/>
+</head>
+<body>
+<div th:replace="fragments/nav"></div>
+<div id="container" class="container">
+    <h2>Graduation</h2>
+    <p>Eligibility: Any outstanding or pending library and course fees need to be payed beforehand.</p>
+    <p>Current eligibility is: <span th:text="${message}"></span>.</p>
+    <p th:if="${balanceOutstanding}">Please log into the Payment Portal to pay your outstanding balance.</p>
+</div>
+<div th:replace="fragments/footer"></div>
+</body>
+</html>
